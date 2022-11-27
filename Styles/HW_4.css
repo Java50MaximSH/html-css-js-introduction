@@ -1,0 +1,54 @@
+ .kletka-black{ 
+    border: solid 2px black;
+    width: 5vw;
+    height: 5vw;
+    background-color: black;
+}
+
+.kletka-white{
+    border: solid 2px black;
+    width: 5vw;
+    height: 5vw;
+    background-color: white;
+    display: flex;}
+
+.kletka-letter{
+         /* border: solid 2px ; */
+         justify-content: center;
+         
+         display:inline-block ; 
+        width: 5vw;
+        height: 5vw;
+        /* background-color: rgb(92, 5, 5);  */
+      
+}
+
+
+.line {
+display: flex;
+flex-direction: row;
+
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+body {
+    display: flex;
+      justify-content: center; 
+     align-items: center; 
+      height: 100%; 
+   
+}
+
+html {
+
+height: 100%;
+
+
+}
