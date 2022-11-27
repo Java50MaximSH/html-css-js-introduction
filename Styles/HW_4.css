@@ -14,10 +14,10 @@
 
 .kletka-letter{
          /* border: solid 2px ; */
-         justify-content: center;
          
          display:inline-block ; 
-        width: 5vw;
+         text-align: center;
+        width: 5.5vw;
         height: 5vw;
         /* background-color: rgb(92, 5, 5);  */
       
