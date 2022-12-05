@@ -155,13 +155,14 @@ justify-content:center;
 
      .expo-image {
         
-        width: 75vh;
+        width: 74vh;
         height: 60vh;
      }
         
      .expo-txt {
         font-size: 3vw;
-        height: 5vw;
+        height: 5vw; 
+
      }  
         
 
