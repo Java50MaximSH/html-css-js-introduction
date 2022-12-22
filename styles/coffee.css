@@ -14,13 +14,26 @@ html {
 
 body {
 
+    --expo-image-width: 80vw;
+    --expo-image-height: 80vw; 
+    --gallary-item-height: 19vw;
+    --gallary-item-width: 25vw;
+    --gallary-item-txt:calc(var(--gallary-item-image-height)*0.33);
+    --gallary-list-height:calc(var(--gallary-item-height)*2.6);
+
+
+
+}
+
+body {
+
  height: 100%;
  display: flex;
 flex-direction: column;
 background-color: azure;
 align-items: center;
 margin: 0;
-background-color: #434242;
+background-color: #000000;
 
 
 }
@@ -32,11 +45,14 @@ background-color: #434242;
 text-transform: uppercase;
  font-size: 1em; 
 width: 100vw; 
-margin: 0px;
+
 color: #F3EFE0;
 font-family:airstream ;
-height: 15vw;
-;
+max-height: 15vw; 
+margin-bottom:25px;
+
+
+
 
 
 }
@@ -46,31 +62,67 @@ height: 15vw;
  display: flex;
  flex-direction: column; 
  align-items: center; 
- flex-grow: 1;   /* Возможность расширять контейнер (в пропорциях по отношению к другму контейнеру в том же родителе т.е у нас родитель Body ), перелвжение по контейнеру через justify-content и alighn-items*/
+ flex-grow: 1;   /* Возможность расширять контейнер (в пропорциях по отношению к другим контейнерам в том же родителе т.е у нас родитель Body ), передвжение по контейнеру через justify-content и alighn-items*/
 justify-content:center;
  background-color: black;
  width: 100%;
  
 }
 
+.hidden.main-class {
+
+    justify-content: space-around;
+} 
+
+
+
 .expo-container {
 
     display: flex;
     flex-direction: column;
-    justify-content:flex-start ;
-    /* align-items:flex-start; */
-    /* width: 100vw; */
-   
-    overflow: hidden;
-    
-    
+    justify-content:center ;
+    align-items:center; 
+    width: auto;
+    flex-grow: 1; 
+    max-height: 50vh;
+    overflow: hidden;  /* Все что выходит за рамки контейнера контейнера т.е его внутр. блоки будут обрезаться  */
+
+    transition: 5s cubic-bezier(0.8, 2, 0.2, 1); /* Время за которое происходит transform (Если нет transform в кдассе значит возврат к форме/положению/размеру по умолчанию (как Тут) ) */
+}
+
+.hidden .expo-container {
+
+display: none;
+
+}
+.details-frame {
+   position: relative;
+
+
+
+}
+
+#buttonHide {
+position: absolute;
+top: 10%;
+right: 10%;
+}
+
+.audio{
+    display: flex;
+    position: absolute;
+    max-width: 50vw;
+    max-height: 5vw;
+
+
 
 }
 
 .expo-image {
     border-radius: 25%;
-    width: 65vw;
-    height: 50vw;
+   width:var(--expo-image-width);
+    height: var(--expo-image-height)
+    
     
 
 }
@@ -78,21 +130,30 @@ justify-content:center;
 .expo-txt {
     display: block; 
     text-align: center;
-    color: #F3EFE0;
-    /* background-color: #434242; */
-    width: 65vw;
-    height: 15vw;
-    font-size: 3vh;
+    color: #ffffff;
+     background-color: #434242; 
+    max-width: 55vw;
+    font-size: 2vh;
+    position: absolute;
+    bottom: 10%;
+    left:15%;
+    
+    
     
     
 }
 
-.gallary-list {
+.hidden .gallary-list{
+min-height: 60vh ;
 
+}
+
+.gallary-list {
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around ;
-    height: 27vh; 
+    height: var(--gallary-list-height); 
     background-color: #F3EFE0; 
     padding-left: 0;  
     padding-inline-start: 0;
@@ -109,24 +170,32 @@ justify-content:center;
     border:solid 2px #434242 ;
     margin-top: 2vh; 
     border-radius: 25%;
-    max-height: 20vw;
+    width: var(--gallary-item-width);
+    height:var(--gallary-item-height);
+    
+   
    
     
+}
+.gallary-item:hover {
+    transform: scale(1.1); 
 }
 
 .gallary-item-anchor{
     
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     text-decoration: none;
 
 }
 
+
+
 .gallary-item-image {
    
-    
+    display:block;
     width: 25vw;
-    height: 15vw;
+    height: 14vw ;
     
 }
 
@@ -135,33 +204,106 @@ justify-content:center;
     display: block;
     background-color: #22A39F;
     text-align: center;
-    height: 5vw;
+    height:50vw; 
 }
 
+.is-point{
+
+    transform: scale(0.001 );
+    transition: 0s;
+    
+    
+}
+
+
+/* Media Queries  т.е адаптация экрана под другие размеры. (min - От) , (max - До) //////////////////// */
 @media(min-width:560px) {
 
+
+    body {
+        --expo-image-width: 45vw;
+        --expo-image-height: 35vw; 
+        
+        --gallary-image-height: 8vw;
+        --gallary-image-width: 18vw;
+        
+        --gallary-item-txt:10vw;
+        
+        --gallary-item-height: 10vw;
+        --gallary-item-width: 15vw;
+        
+        --gallary-list-height:35vw;
+       
+       
+
+       
+       
+
+    
+    
+        }
+
+    
+
     .logo {
-        height: 15vh ;
+        max-height: 15vh ;
+        margin-bottom: 25px;
     }
     .main-class {
         flex-direction: row;
         justify-content: space-around;
+        align-items: start;
     }
+
+     /* .main-class.hidden { 
+    --gallary-item-height: 15vw;
+    --gallary-item-width: 20vw;
+    --gallary-image-width: var (--gallary-item-width); 
+    --gallary-image-height:12vw;
+    --gallary-item-txt:calc(var(--gallary-item-image-height)*0.5);
+    --gallary-list-height:calc(var(--gallary-item-height)*2.2);  
+
+    
+    } */
+
+    .main-class.hidden { 
+        --gallary-item-height: 12vw;
+        --gallary-item-width: 17vw;
+        --gallary-image-width: 20vw; 
+        --gallary-image-height:10vw;
+        --gallary-item-txt:8vw;
+        --gallary-list-height:calc(var(--gallary-item-height)*2.3);
+
+         /* display: flex; */
+         
+          /* flex-direction: column;   */
+          /* justify-content: end;  */
+
+           /* align-items: flex-end;   */
+       
+
+    
+    }
+
+
 
     .expo-container {
 
-        align-items: center;
+        align-items:center;
+        max-width: 65vw;
+        max-height: 45vw;
+      
+        /* border: solid 2px green; */
     }
 
-     .expo-image {
-        
-        width: 74vh;
-        height: 60vh;
+     .expo-image {   
+        width: var(---expo-image-width); 
+        height:var(--expo-image-height);  
      }
         
      .expo-txt {
-        font-size: 3vw;
-        height: 5vw; 
+        font-size: 2.5vw;
+        max-width: 35vw;
 
      }  
         
@@ -169,29 +311,63 @@ justify-content:center;
 
     .gallary-list {
         order:-1;
-        width: 20vw; 
-        /* padding-left: 0%; */
-        padding-inline-start:1em;  /* /// */
+        /* min-width: 22vw;  */
+        padding-left: 1%; 
+       /* padding-inline-start:1em;  /* /// */
         margin-top: 0%;
-        margin-bottom: 5vw;
+        margin-bottom: 0px;
+        margin-left: 0vw;
+        padding-right: 1vw;
         flex-direction: column;
         flex-wrap: nowrap;
-        height: 29vw;
-        justify-content: flex-start;
-        /* align-items: center; */
+        max-height: var(--gallary-list-height);
+        justify-content:flex-start;
+        align-items: center; 
+        border:solid 2px #22A39F ;
+        /* border-radius: 25%; */
         
     }  
+
+   .hidden .gallary-list
+    {
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content:space-evenly;
+     /* flex-grow: 1;  */
+     /* max-height: 60vw; */
+
+    } 
+
+    
+
+
     .gallary-item  {
-         min-height: 25vh; 
-         max-width: 35vh;
+        
+        min-height: var(--gallary-item-height);  
+        /* max-height: 25vw; */
+        
+        max-width: var(--gallary-item-width);
+         /* min-height:10vw ; 
+         max-width: 25vw ;
+         max-height: 45vw ;
+         margin-top: 5vh; */
+         
          
     }
     .gallary-item-image {
    
     
-        width: 35vh;
-        height: 20vh;
+        max-width: var(--gallary-image-width);
         
+       
+        max-height: var(--gallary-image-height); 
+        
+    }
+
+    .gallary-item-txt  {
+    max-height: var(--gallary-item-txt) ;
+   
+
     }
 
 }

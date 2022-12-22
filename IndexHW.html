@@ -19,26 +19,44 @@
 
     
 
-    <main class="main-class">
+    <main class="main-class hidden ">
 
         <section class="expo-container">
-            <img src="images/COFFEE/Capuccino.jpg" class="expo-image" alt="">
+        
+        <div class="details-frame">
+            <!-- <button id="buttonHide" onclick="hideExpo()" >X</button>  Способ исползование JS из HTML  -->
+            <button id="buttonHide" >X</button>  
+            <img src="images/COFFEE/Capuccino.jpg" class="expo-image" alt=""> 
             <span class="expo-txt">Somthin abt the Expo-pic</span>
+             <audio control  class="audio">
+                
+                <source src="images/cow.mp3" type="audio/mpeg">
+              
+              </audio>
+              
+        </div>
+
         </section>
 
-        <ul class="gallary-list">
-
-            <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
-                    <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image " alt="">
-                   <span class="gallary-item-txt"> Txt </span>
+        <ul class="gallary-list">            
+            <!-- onclick="audioPlay ()" -->
+            <li class="gallary-item" >
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem = "images/dog1.jpg"
+                 data-details-txt-from-gallryItem = "description 1"
+                
+                 data-details-audio-from-gallryItem = "images/cow.mp3" >
+                    
+                <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image" alt="">
+                <span class="gallary-item-txt"> Txt </span>
                     
 
                 </a>
             </li>
 
-            <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+            <li class="gallary-item"  >
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem = "images/COFFEE/Capuccino.jpg"
+                data-details-txt-from-gallryItem = "description 1" 
+                data-details-audio-from-gallryItem= "images/arigato.mp3">
                     <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
@@ -46,7 +64,8 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem = "images/COFFEE/Capuccino.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
@@ -54,7 +73,8 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
                    <span class="gallary-item-txt"> Txt </span>
                     
@@ -63,22 +83,26 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
+                
                     <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
                 </a>
             </li>
 
-            <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+             <li class="gallary-item"> 
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
                 </a>
             </li> 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image " alt="">
                    <span class="gallary-item-txt"> Txt </span>
                     
@@ -87,7 +111,8 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
@@ -95,7 +120,8 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Capuccino.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
@@ -103,7 +129,8 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
                    <span class="gallary-item-txt"> Txt </span>
                     
@@ -112,7 +139,8 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
@@ -120,12 +148,41 @@
             </li>
 
             <li class="gallary-item">
-                <a class="gallary-item-anchor" href="#">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
                     <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
                     <span class="gallary-item-txt">Txt</span>
 
                 </a>
-            </li> 
+            </li>  
+
+            <li class="gallary-item">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
+                    <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
+                   <span class="gallary-item-txt"> Txt </span>
+                    
+
+                </a>
+            </li>
+
+            <li class="gallary-item">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
+                    <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
+                    <span class="gallary-item-txt">Txt</span>
+
+                </a>
+            </li>
+
+            <li class="gallary-item">
+                <a class="gallary-item-anchor" href="#" data-details-image-from-gallryItem="images/dog1.jpg"
+                data-details-txt-from-gallryItem = "description 1">
+                    <img src="images/COFFEE/Americano.jpg" class="gallary-item-image " alt="">
+                    <span class="gallary-item-txt">Txt</span>
+
+                </a>
+            </li>  
 
 
         </ul>
@@ -135,6 +192,11 @@
     </main>
 
 
+    
+    <script src="src/again1.js"></script>
+
+
 </body> 
+
 
 </html>
