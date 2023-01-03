@@ -3,7 +3,7 @@
 let number =12345;
 
 function getDigitSum(number) {
-   let sum=0;
+   let sum=0;   //  number = Math.trunc(Math.abs(number))
 
    do {sum += number%10; 
        number=Math.floor(number/10) ;      
@@ -26,6 +26,9 @@ console.log(getDigitSum(number));
 function computeExpression(str) {
       return eval(str);
 
+   // res= eval(str);
+   // return res;   
+
 }
 console.log(computeExpression(str));
  
@@ -35,7 +38,7 @@ console.log(computeExpression(str));
 
 let num = -12345;
 
- function reverse(number){
+ function reverse(number){                    //abs???????????
 
 number=number>0 ? number: number*-1 ; 
 
@@ -46,7 +49,7 @@ do{
     number= Math.floor(number/10);
 }
 while(number!=0);
-let a="-";
+//let a="-";
 
 newNumb=number>0 ? newNumb :newNumb*-1;
 

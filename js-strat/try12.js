@@ -1,0 +1,9 @@
+//let a = f;
+let b  = 10; //'255'
+//let tostringInt = a.toString(10);
+let tostringStr = b.toString(2);
+//let parseIntt = parseInt(a,10);
+let parseStr = parseInt(b,10);
+// let strTo_int10 = parseInt(b,10);
+// let int10To_int36 = parseInt(b,16);
+// let c = 23;
