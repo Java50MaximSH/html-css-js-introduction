@@ -10,6 +10,7 @@ function randomNumber(min, max) {
 
 function getArray(longG, min, max) {
     const randomArray = [];
+    // randomArray = new Array(array.length)
     for (let i = 0; i < longG; i++) {
         randomArray.push(randomNumber(min, max));
     }
@@ -23,7 +24,7 @@ function getHtmlUl(array) {
     let text = "<ul class='list_class'>"
     for (let i = 0; i < array.length; i++) {
         let color = array[i] ? "<div class='White'>" : "<div class='Black'>";
-        text += "<li class='item_class'>" + color + "</div></li>";
+        text += `<li class='item_class'> ${color}</div></li>`;
     }
     text += "</ul>"
     return text;
